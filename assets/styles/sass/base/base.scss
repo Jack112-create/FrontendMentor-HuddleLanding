@@ -1,0 +1,171 @@
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+$white: #fff;
+$black: #000;
+$header-font: 'Poppins', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body-font;
+  font-weight: 400;
+  color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font;
+}
+
+.huddle-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $violet;
+  background-image: url('/assets/images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 50px;
+
+  .container-items {
+    display: flex;
+    flex-direction: column;
+
+    .huddle-image-container,
+    .huddle-content {
+      width: 100%;
+    }
+  }
+
+  .huddle-logo-container {
+    margin-bottom: 50px;
+
+    .logo {
+      width: 150px;
+    }
+  }
+
+  .huddle-image-container {
+    .illustration {
+      max-width: 100%;
+    }
+  }
+
+  .huddle-content {
+    padding: 50px 15px;
+
+    .title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .huddle-info {
+      text-align: center;
+    }
+
+    .register-btn {
+      color: $violet;
+      padding: 20px;
+      background-color: $white;
+      outline: none;
+      border-radius: 20px;
+      min-width: 200px;
+      display: block;
+      margin: 20px auto;
+      border: 1px solid $black;
+      box-shadow: 0 10px 6px -6px $black;
+      transition: all 0.25s ease-in-out;
+      font-size: 20px;
+
+      &:hover {
+        background-color: $magenta;
+        color: $white;
+        border-color: $magenta;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+
+    .social-icon {
+      border: 1px solid $white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      text-decoration: none;
+      margin-right: 15px;
+      transition: all 0.25s ease-in-out;
+
+      i {
+        color: $white;
+        font-size: 20px;
+        transition: all 0.25s ease-in-out;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      &:hover {
+        color: $magenta;
+        border-color: $magenta;
+
+        i {
+          color: $magenta;
+        }
+      }
+    }
+  }
+}
+
+/* Using plain CSS */
+@media (min-width: 768px) {
+  .huddle-container {
+    background-image: url('/assets/images/bg-desktop.svg');
+    background-size: cover;
+    background-position: center;
+
+    .huddle-logo-container {
+      .logo {
+        width: auto;
+      }
+    }
+
+    .container-items {
+      flex-direction: row;
+
+      .huddle-image-container,
+      .huddle-content {
+        width: 100%;
+      }
+
+      .huddle-content {
+        .title {
+          text-align: left;
+        }
+
+        .huddle-info {
+          text-align: left;
+        }
+
+        .register-btn {
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
