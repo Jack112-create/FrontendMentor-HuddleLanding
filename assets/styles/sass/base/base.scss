@@ -92,40 +92,40 @@ h6 {
       }
     }
   }
+}
 
-  .socials {
+.socials {
+  display: flex;
+  justify-content: center;
+
+  .social-icon {
+    border: 1px solid $white;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: all 0.25s ease-in-out;
 
-    .social-icon {
-      border: 1px solid $white;
-      border-radius: 50%;
+    i {
+      color: $white;
+      font-size: 20px;
+      transition: all 0.25s ease-in-out;
+      width: 20px;
+      height: 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      text-decoration: none;
-      margin-right: 15px;
-      transition: all 0.25s ease-in-out;
+    }
+
+    &:hover {
+      color: $magenta;
+      border-color: $magenta;
 
       i {
-        color: $white;
-        font-size: 20px;
-        transition: all 0.25s ease-in-out;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-      }
-
-      &:hover {
         color: $magenta;
-        border-color: $magenta;
-
-        i {
-          color: $magenta;
-        }
       }
     }
   }
